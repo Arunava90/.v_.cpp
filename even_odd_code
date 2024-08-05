@@ -1,11 +1,11 @@
 // Verilog Code
 
-module even_odd #parameter (DATA_WIDTH = 8,
+module even_odd #(parameter DATA_WIDTH = 8,
                             EVEN  =  1,
                             ODD   =  2) 
                             
                 (input [DATA_WIDTH-1 : 0] i_number,
-                 output [1:0]             o_even_odd);     // 01 = Even number, 10 = ODD number 
+                 output reg [1:0]         o_even_odd);     // 01 = Even number, 10 = ODD number 
 
 always@ (i_number)
 begin
